@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fish Floss Gacor16 | Abon Ikan Laut Asli</title>
+    <meta
+      name="description"
+      content="Abon ikan laut 100% tanpa pengawet tambahan. Pilih rasa pedas manis atau daun jeruk. Bayar COD atau transfer."
+    />
+    <link rel="icon" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="#"
+          ><img src="images/logo.png" alt="Logo Fish Floss Gacor16" />Fish Floss
+          by Gacor16</a
+        >
+        <nav>
+          <a class="l" href="#produk">Produk</a>
+          <a class="l" href="#cara">Cara Pesan</a>
+          <button class="cart-btn" id="openCart" aria-label="Buka keranjang">
+            Keranjang <span id="cartCount">0</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Abon ikan laut, gurihnya bikin nambah nasi.</h1>
+          <p>
+            Dibuat dari 100% ikan laut tanpa pengawet tambahan. Pilih pedas
+            manis atau daun jeruk, bayar COD atau transfer.
+          </p>
+          <a class="btn" href="#produk">Lihat produk</a
+          ><a class="btn ghost" href="#cara">Cara pesan</a>
+          <div class="badges">
+            <span>100% ikan laut</span><span>Tanpa pengawet tambahan</span
+            ><span>Netto 100 g</span>
+          </div>
+        </div>
+        <img class="logo" src="images/logo.png" alt="Fish Floss Gacor16" />
+      </div>
+      <svg class="wave" viewBox="0 0 1440 50" preserveAspectRatio="none">
+        <path d="M0 30 Q180 0 360 25 T720 25 T1080 25 T1440 20 V50 H0Z" />
+      </svg>
+    </div>
+
+    <section id="produk">
+      <div class="wrap">
+        <div class="title">
+          <h2>Dua rasa, satu kebiasaan baru</h2>
+          <p>Pilih rasa favorit, masukkan ke keranjang.</p>
+        </div>
+        <div class="grid" id="products"><p>Memuat produk...</p></div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="wrap">
+        <div>
+          <h3>Ikan laut pilihan</h3>
+          <p>
+            Diolah dari ikan laut segar, tanpa campuran bahan pengawet tambahan.
+          </p>
+        </div>
+        <div>
+          <h3>Dua pilihan rasa</h3>
+          <p>
+            Pedas manis untuk yang suka pedas, daun jeruk untuk yang suka aroma
+            segar.
+          </p>
+        </div>
+        <div>
+          <h3>Bayar sesuai kebutuhan</h3>
+          <p>COD atau transfer ke rekening admin. Anda yang memilih.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="cara">
+      <div class="wrap">
+        <div class="title"><h2>Cara pesan</h2></div>
+        <ol>
+          <li>Tambahkan produk ke keranjang.</li>
+          <li>Isi nama, nomor WhatsApp, dan alamat pengantaran.</li>
+          <li>Pilih bayar di tempat (COD) atau transfer ke rekening admin.</li>
+          <li>
+            Admin memproses pesanan dan mengabari jadwal pengantaran lewat
+            WhatsApp.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <footer>
+      <p class="brand" style="justify-content: center">Fish Floss Gacor16</p>
+      <p>Abon ikan laut asli. Hubungi kami melalui:</p>
+      <div
+        id="socialLinks"
+        class="contact-links"
+        aria-label="Kontak dan media sosial"
+      ></div>
+      <p>
+        <a href="admin.html" style="opacity: 0.5; font-size: 0.8rem">Admin</a>
+      </p>
+    </footer>
+
+    <!-- Keranjang & checkout -->
+    <div class="overlay" id="overlay"></div>
+    <aside class="drawer" id="drawer" aria-label="Keranjang belanja">
+      <header>
+        <div class="wrap">
+          <b class="brand">Keranjang</b
+          ><button class="x" id="closeCart" aria-label="Tutup">&times;</button>
+        </div>
+      </header>
+      <div class="content">
+        <div id="cartItems"></div>
+        <div class="total">
+          <span>Total</span><span id="cartTotal">Rp 0</span>
+        </div>
+        <form id="checkout">
+          <label for="cName">Nama lengkap</label><input id="cName" required />
+          <label for="cPhone">Nomor WhatsApp</label
+          ><input id="cPhone" type="tel" placeholder="08xxxxxxxxxx" required />
+          <label for="cAddr">Alamat pengantaran</label
+          ><textarea id="cAddr" rows="3" required></textarea>
+          <label for="cNote">Catatan (opsional)</label><input id="cNote" />
+          <label>Metode pembayaran</label>
+          <div class="pay">
+            <label
+              ><input type="radio" name="pay" value="cod" checked /> COD</label
+            >
+            <label
+              ><input type="radio" name="pay" value="transfer" />
+              Transfer</label
+            >
+          </div>
+          <div class="bank" id="bank"></div>
+          <button
+            class="btn dark"
+            style="width: 100%; margin-top: 16px"
+            id="orderBtn"
+          >
+            Pesan sekarang
+          </button>
+          <div id="result"></div>
+        </form>
+      </div>
+    </aside>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

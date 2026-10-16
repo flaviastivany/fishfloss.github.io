@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin | Fish Floss Gacor16</title>
+    <link rel="icon" href="images/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="index.html"
+          ><img src="images/logo.png" alt="Logo" />Admin Panel</a
+        >
+        <nav>
+          <a href="index.html">Lihat toko</a
+          ><button class="cart-btn hide" id="logout">Keluar</button>
+        </nav>
+      </div>
+    </header>
+
+    <form class="login" id="loginForm">
+      <h2>Masuk admin</h2>
+      <label for="email">Email</label><input id="email" type="email" required />
+      <label for="pass">Password</label
+      ><input id="pass" type="password" required />
+      <button class="btn dark" style="width: 100%; margin-top: 16px">
+        Masuk
+      </button>
+      <div id="loginMsg"></div>
+    </form>
+
+    <main class="admin hide" id="panel">
+      <div class="stats" id="stats"></div>
+      <div class="tabs">
+        <button class="on" data-tab="orders">Pesanan</button>
+        <button data-tab="stock">Produk &amp; stok</button>
+      </div>
+      <div id="orders"></div>
+      <div id="stock" class="hide"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+    <script src="config.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

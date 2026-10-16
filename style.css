@@ -1,0 +1,121 @@
+:root{--dark:#2e1307;--brown:#5a2a10;--mid:#8a4a1f;--cream:#fbf0d6;--paper:#fff8e8;--orange:#f29a1f;--amber:#d36a0b;--ink:#2a1608;--radius:18px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+h1,h2,h3,.brand{font-family:'Lilita One',cursive;font-weight:400;letter-spacing:.3px}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:var(--dark);color:var(--cream);box-shadow:0 2px 14px #0005}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-size:1.3rem;text-decoration:none}
+.brand img{width:46px;height:46px;border-radius:50%}
+nav{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;font-weight:700}
+nav a:hover{color:var(--orange)}
+.cart-btn{background:var(--orange);color:var(--dark);border:0;border-radius:999px;padding:9px 18px;font:700 1rem Nunito;cursor:pointer}
+.cart-btn span{background:var(--dark);color:var(--cream);border-radius:999px;padding:1px 9px;margin-left:6px}
+
+/* hero */
+.hero{background:radial-gradient(circle at 78% 40%,var(--orange) 0,var(--amber) 22%,var(--brown) 52%,var(--dark) 85%);color:var(--cream);padding:70px 0 90px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.02;margin-bottom:16px}
+.hero p{font-size:1.15rem;max-width:480px;margin-bottom:26px;opacity:.95}
+.hero .logo{width:min(380px,100%);margin:auto;border-radius:50%;box-shadow:0 20px 60px #0008;transform:rotate(-4deg)}
+.btn{display:inline-block;background:var(--orange);color:var(--dark);border:0;border-radius:999px;padding:13px 28px;font:700 1.05rem Nunito;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{background:#ffb347;transform:translateY(-2px)}
+.btn.dark{background:var(--dark);color:var(--cream)}
+.btn.dark:hover{background:var(--brown)}
+.btn.ghost{background:none;border:2px solid var(--cream);color:var(--cream);margin-left:8px}
+.wave{position:absolute;bottom:-1px;left:0;width:100%;height:50px;fill:var(--cream)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.badges span{background:#ffffff1f;border:1px solid #ffffff44;border-radius:999px;padding:4px 14px;font-size:.9rem}
+
+/* sections */
+section{padding:70px 0}
+.title{text-align:center;margin-bottom:38px}
+.title h2{font-size:clamp(2rem,4vw,2.9rem);color:var(--brown)}
+.title p{color:var(--mid)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;max-width:860px;margin:auto}
+.card{background:var(--paper);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px #5a2a1822;border:2px solid #e8d3a6;display:flex;flex-direction:column;transition:transform .2s}
+.card:hover{transform:translateY(-6px)}
+.card img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.card .body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:1.5rem;color:var(--brown)}
+.price{font:400 1.6rem 'Lilita One';color:var(--amber)}
+.stock{font-size:.9rem;font-weight:700;color:#2f7d32}
+.stock.low{color:#c0392b}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:34px;height:34px;border-radius:50%;border:2px solid var(--brown);background:none;font:700 1.2rem Nunito;cursor:pointer;color:var(--brown)}
+.qty button:hover{background:var(--brown);color:var(--cream)}
+.card .btn{margin-top:auto;text-align:center}
+.btn:disabled{background:#bbb;cursor:not-allowed;transform:none}
+
+.about{background:var(--dark);color:var(--cream)}
+.about .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;text-align:center}
+.about h3{font-size:1.4rem;color:var(--orange)}
+.how ol{max-width:640px;margin:auto;padding-left:24px;font-size:1.1rem}
+.how li{margin-bottom:10px}
+footer{background:var(--dark);color:var(--cream);text-align:center;padding:30px 20px;border-top:4px solid var(--orange)}
+.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:14px}
+.contact-link{display:flex;align-items:center;gap:10px;min-width:190px;padding:10px 14px;border:1px solid #ffffff44;border-radius:14px;text-align:left;text-decoration:none;transition:background .15s,transform .15s}
+.contact-link:hover{background:#ffffff1a;transform:translateY(-2px)}
+.contact-link>span:last-child{display:grid;line-height:1.3}
+.contact-link small{font-size:.85rem;opacity:.8}
+.contact-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#fff;color:#222}
+.contact-icon svg{width:23px;height:23px;fill:currentColor}
+.contact-icon.whatsapp{color:#25d366}
+.contact-icon.instagram{color:#c13584}
+.contact-icon.facebook{color:#1877f2}
+
+/* cart drawer & modal */
+.overlay{position:fixed;inset:0;background:#000a;z-index:40;display:none}
+.overlay.open{display:block}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(440px,100%);background:var(--paper);z-index:50;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.drawer header{position:static;box-shadow:none}
+.drawer header .wrap{height:60px;padding:0 18px}
+.drawer .content{padding:18px;overflow:auto;flex:1}
+.item{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px dashed #cbb27c}
+.item img{width:56px;height:56px;border-radius:10px;object-fit:cover}
+.item div{flex:1}
+.x{background:none;border:0;font-size:1.6rem;color:inherit;cursor:pointer}
+label{display:block;font-weight:700;margin:12px 0 4px}
+input,textarea,select{width:100%;padding:10px 12px;border:2px solid #d9c18c;border-radius:10px;background:#fff;font:1rem Nunito;color:var(--ink)}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pay label{border:2px solid #d9c18c;border-radius:12px;padding:10px;margin:0;cursor:pointer;display:flex;gap:8px;align-items:center}
+.pay input{width:auto}
+.pay label:has(input:checked){border-color:var(--amber);background:#ffe9bd}
+.bank{background:#ffe9bd;border-radius:12px;padding:12px;margin-top:10px;font-size:.95rem;display:none}
+.total{display:flex;justify-content:space-between;font:400 1.5rem 'Lilita One';margin:16px 0}
+.msg{padding:12px;border-radius:10px;margin-top:12px;font-weight:700}
+.msg.ok{background:#d9f2d9;color:#1f5d21}
+.msg.err{background:#fbd8d4;color:#8b1d12}
+
+/* admin */
+.admin{max-width:1100px;margin:30px auto;padding:0 20px}
+.login{max-width:380px;margin:80px auto;background:var(--paper);padding:30px;border-radius:var(--radius);box-shadow:0 10px 30px #0003}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:26px}
+.stat{background:var(--dark);color:var(--cream);border-radius:var(--radius);padding:18px}
+.stat b{display:block;font:400 2rem 'Lilita One';color:var(--orange)}
+.tabs{display:flex;gap:10px;margin-bottom:18px}
+.tabs button{padding:10px 22px;border-radius:999px;border:2px solid var(--brown);background:none;font:700 1rem Nunito;cursor:pointer;color:var(--brown)}
+.tabs button.on{background:var(--brown);color:var(--cream)}
+.order,.prow{background:var(--paper);border:2px solid #e8d3a6;border-radius:var(--radius);padding:16px;margin-bottom:14px}
+.order .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.order .ctrl{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px;align-items:end}
+.tag{display:inline-block;padding:2px 12px;border-radius:999px;background:var(--orange);font-size:.85rem;font-weight:800}
+.prow{display:grid;grid-template-columns:70px 1fr 120px 130px auto;gap:12px;align-items:center}
+.prow img{width:70px;height:70px;border-radius:10px;object-fit:cover}
+.hide{display:none!important}
+
+@media(max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;text-align:center}.hero p{margin-inline:auto}.badges{justify-content:center}
+  .hero .logo{order:-1;width:220px}
+  nav a.l{display:none}
+  .prow{grid-template-columns:60px 1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
