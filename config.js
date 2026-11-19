@@ -1,6 +1,6 @@
 // ISI DENGAN DATA ANDA (Supabase > Project Settings > API)
-const SUPABASE_URL = "https://xmohazrbijqanzhejlps.supabase.co/";
-const SUPABASE_ANON_KEY = "sb_publishable_Wr2SUADJT52Nw4_fm3kULw_O52tOllw";
+const SUPABASE_URL = "https://kgehorjyfoezrpbmjzvx.supabase.co/";
+const SUPABASE_ANON_KEY = "sb_publishable_fC8vqoR4LNNNRwitlS0Q9w_P8GBtY0h";
 
 // Info toko
 const STORE = {
